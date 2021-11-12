@@ -114,9 +114,6 @@
         
     }
 
-    &__user{
-
-    }
     &__user-photo{
 
         height: 3.75rem;
@@ -124,8 +121,81 @@
         margin-right: 1.5rem;
 
     }
-    &__user-name{
+ 
+}
+
+
+/////////////////////////////////////////////
+/////Side Nav
+
+.side-nav{
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top:3.5rem;
+    
+
+    &__item{
+        text-decoration: none;
+        position: relative;
+        
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        };
+
+        &::before{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background-color: var(--primary-color); 
+            transform: scaleY(0);
+            transition: transform .3s, 
+                                  width .6s .3s,   // .6s duration .3 delay
+                                  background .2s;
+
+        }
+
+        
+        &:hover::before, &--active::before{
+            width: 100%;
+            transform: scaleY(1);
+        }
+
+        &:active::before{
+            background-color:var(--primary-color-light);
+        }
 
     }
 
+    
+
+
+    &__link:link, &__link:visited{
+        color:   var(--grey-light-1);
+         text-decoration:none;
+         text-transform: uppercase;
+         display: block;
+         padding:1.5rem 3rem;
+         position: relative;
+         z-index: 10;
+         
+
+         display: flex;
+         align-items: center;
+    }
+
+    &__icon{
+        height: 1.7rem;
+        width: 1.7rem;
+        margin-right: 2rem;
+        fill: currentColor;
+    }
 }
+
+.copyright{
+    font-size: 1.2rem;
+    color: var(--grey-light-4);
+    text-align: center;
+    padding: 2.5rem
+}
+
