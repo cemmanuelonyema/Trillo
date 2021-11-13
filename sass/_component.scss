@@ -15,6 +15,11 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width:$bp-smallest){
+        background-color: var(--grey-light-2);
+        order: 1;
+        flex: 0 0 100%;
+    }
 
     &__input {
         font-family: inherit;
@@ -136,6 +141,11 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width:$bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+
 
     &__item {
         text-decoration: none;
@@ -143,9 +153,16 @@
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media only screen and (max-width:$bp-medium) {
+                margin: 0;
+            }
         }
 
-        ;
+        @media only screen and (max-width:$bp-medium) {
+            flex: 1;
+            margin: 0;
+        }
 
         &::before {
             content: "";
@@ -189,6 +206,16 @@
 
         display: flex;
         align-items: center;
+        
+        @media only screen and (max-width:$bp-medium) {
+        justify-content: center;
+        }
+         
+    @media only screen and (max-width:$bp-small) {
+        padding: 1.5rem .5rem;       
+        flex-direction: column;
+    }
+
     }
 
     &__icon {
@@ -196,6 +223,15 @@
         width: 1.7rem;
         margin-right: 2rem;
         fill: currentColor;
+         
+    @media only screen and (max-width:$bp-small) {
+        margin-right: 0;
+        margin-bottom: 5px;
+        height: 1.4rem;
+        width: 1.4rem;
+
+        // flex-direction: column;
+    }
     }
 }
 
@@ -205,7 +241,11 @@
     font-size: 1.2rem;
     color: var(--grey-light-4);
     text-align: center;
-    padding: 2.5rem
+    padding: 2.5rem;
+
+    @media only screen and (max-width:$bp-medium) {
+        display: none;
+    }
 }
 
 
@@ -239,6 +279,13 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+        
+    @media only screen and (max-width:$bp-smallest){
+      
+      font-size: 1.5rem;
+       padding: 1.5rem;
+    }
+
 
 
     }
@@ -264,6 +311,10 @@
     &__location {
         display: flex;
         align-items: center;
+        @media only screen and (max-width:$bp-smallest){
+        
+          margin-left: .6px;
+            }
 
     }
 
@@ -277,6 +328,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+                
+        @media only screen and (max-width:$bp-smallest){
+        
+        padding: 0 1rem;
+        width:30%;
+        }
+  
 
     }
 
@@ -284,7 +342,20 @@
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -5px;
+        @media only screen and (max-width:$bp-smallest){
+        
+           font-size: 1.3rem;
+           margin-bottom: 5px;
+            }
 
+    }
+    &__rating-count{
+        @media only screen and (max-width:$bp-smallest){
+        
+            font-size: .8rem;
+
+        
+             }
     }
 }
 
@@ -513,8 +584,8 @@
     overflow: hidden;
     cursor: pointer;
     transition: all .6s;
-    
-    &>*{
+
+    &>* {
         transition: all .6s;
         height: 100%;
         width: 100%;
@@ -523,29 +594,30 @@
     }
 
     &__visible {
-        padding:  2rem 7rem;
+        padding: 2rem 7rem;
     }
 
     &__invisible {
         position: absolute;
-        padding:  2rem 0;
+        padding: 2rem 0;
         left: 0;
         top: -100%;
     }
+
     &:hover {
         background-image: linear-gradient(to left, var(--primary-color-light), var(--primary-color-dark));
 
     }
 
-    &:hover &__visible{
+    &:hover &__visible {
         transform: translateY(100%);
     }
 
-    &:hover &__invisible{
+    &:hover &__invisible {
         top: 0;
     }
 
-    &:focus{
+    &:focus {
         outline: none;
         animation: pulsate 1s infinite;
     }

@@ -26,6 +26,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: " open sans", sans-serif;
@@ -46,6 +49,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      background-color: var(--grey-light-2);
+      order: 1;
+      flex: 0 0 100%; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -117,11 +125,22 @@ body {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav__item {
     text-decoration: none;
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1;
+        margin: 0; } }
     .side-nav__item::before {
       content: "";
       position: absolute;
@@ -145,17 +164,33 @@ body {
     z-index: 10;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        padding: 1.5rem .5rem;
+        flex-direction: column; } }
   .side-nav__icon {
     height: 1.7rem;
     width: 1.7rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: 5px;
+        height: 1.4rem;
+        width: 1.4rem; } }
 
 .copyright {
   font-size: 1.2rem;
   color: var(--grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .copyright {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -173,6 +208,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__heading {
+        font-size: 1.5rem;
+        padding: 1.5rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -185,6 +224,9 @@ body {
   .overview__location {
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__location {
+        margin-left: .6px; } }
   .overview__rating {
     margin-left: 3rem;
     color: var(--grey-light-2);
@@ -195,10 +237,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__rating {
+        padding: 0 1rem;
+        width: 30%; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -5px; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__rating-average {
+        font-size: 1.3rem;
+        margin-bottom: 5px; } }
+  @media only screen and (max-width: 31.25em) {
+    .overview__rating-count {
+      font-size: .8rem; } }
 
 .btn-inline {
   border: none;
@@ -353,6 +406,11 @@ body {
   background-color: var(--grey-light-1);
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
+  @media only screen and (max-width: 75em) {
+    .main-container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   font-size: 1.4rem;
@@ -362,9 +420,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      height: 10rem;
+      flex-wrap: wrap; } }
 
 .sub-container {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .sub-container {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--grey-dark-1);
@@ -383,6 +448,10 @@ body {
   padding: 4.5rem;
   background-color: var(--grey-light-2);
   border-bottom: 1px solid var(--grey-light-2); }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column;
+      padding: 2.5rem; } }
 
 .description {
   background-color: var(--grey-light-1);
@@ -391,6 +460,10 @@ body {
   margin-right: 4.5rem;
   padding: 5rem;
   box-shadow: 0 2rem 5rem rgba 0, 0, 0, 0.25; }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 4rem; } }
 
 .user-reviews {
   flex: 1;
