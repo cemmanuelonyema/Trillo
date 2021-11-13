@@ -11,7 +11,8 @@
   --grey-dark-1:  #333;
   --grey-dark-2: #777;
   --grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0,0.3); }
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06); }
 
 * {
   margin: 0;
@@ -246,12 +247,42 @@ body {
     margin-right: auto; }
   .recommend__photo {
     box-sizing: content-box;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
-    border: 3px solid var(--white); }
+    border: 2px solid var(--white); }
     .recommend__photo:not(:last-child) {
       margin-right: -1.25rem; }
+
+.review {
+  background-color: var(--white);
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem; }
+  .review__user {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 2rem; }
+  .review__user-box {
+    margin-right: auto; }
+  .review__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: .4rem;
+    text-transform: uppercase; }
+  .review__user-date {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--grey-dark-3); }
+  .review__rating {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 300; }
 
 .main-container {
   max-width: 120rem;
@@ -285,6 +316,7 @@ body {
 
 .detail {
   display: flex;
+  font-size: 1.4rem;
   padding: 4.5rem;
   background-color: var(--grey-light-2);
   border-bottom: 1px solid var(--grey-light-2); }
@@ -298,5 +330,4 @@ body {
   box-shadow: 0 2rem 5rem rgba 0, 0, 0, 0.25; }
 
 .user-reviews {
-  background-color: yellowgreen;
   flex: 1; }

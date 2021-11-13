@@ -391,10 +391,10 @@
 
     &__photo{
         box-sizing: content-box;
-        height: 4rem;
-        width: 4rem;
+        height: 3rem;
+        width: 3rem;
         border-radius: 50%;
-        border: 3px solid var(--white);
+        border: 2px solid var(--white);
 
         &:not(:last-child){
             margin-right: -1.25rem;
@@ -405,3 +405,55 @@
 }
 
 
+
+////////////////////////////////////////
+// Reviews
+
+.review{
+    background-color: var(--white);
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+
+    &__text{
+
+    }
+    &__user{
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+
+    }
+
+    &__photo{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin-right: 2rem;
+
+    }
+
+    &__user-box{
+        margin-right: auto;
+    }
+
+    &__user-name{
+        font-size:1.1rem;
+        font-weight: 600;
+        margin-bottom: .4rem;
+        text-transform: uppercase;
+    }
+
+    &__user-date{
+        font-size: 1rem;
+        font-weight: 300;
+        color: var(--grey-dark-3)
+    }
+
+    &__rating{
+        color: var(--primary-color);
+        font-size: 2rem;
+        font-weight:300;
+
+    }
+}
